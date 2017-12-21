@@ -21,11 +21,11 @@
 
             dropper.addEventListener('dragover', function(e) {
                 e.preventDefault(); // On autorise le drop d'éléments
-                this.className = 'dropper drop_hover'; // Et on applique le style adéquat à notre zone de drop quand un élément la survole
+                this.className = 'film_connexion_structure dropper drop_hover'; // Et on applique le style adéquat à notre zone de drop quand un élément la survole
             });
 
             dropper.addEventListener('dragleave', function() {
-                this.className = 'dropper'; // On revient au style de base lorsque l'élément quitte la zone de drop
+                this.className = 'film_connexion_structure dropper'; // On revient au style de base lorsque l'élément quitte la zone de drop
             });
 
             var dndHandler = this; // Cette variable est nécessaire pour que l'événement « drop » ci-dessous accède facilement au namespace « dndHandler »
@@ -40,7 +40,7 @@
                     target = target.parentNode;
                 }
 
-                target.className = 'dropper'; // Application du style par défaut
+                target.className = 'film_connexion_structure dropper'; // Application du style par défaut
 
                 clonedElement = target.appendChild(clonedElement); // Ajout de l'élément cloné à la zone de drop actuelle
                 dndHandler.applyDragEvents(clonedElement); // Nouvelle application des événements qui ont été perdus lors du cloneNode()
@@ -53,18 +53,22 @@
 
     };
 
-    var elements = document.querySelectorAll('.draggable'),
-        elementsLen = elements.length;
 
-    for (var i = 0; i < elementsLen; i++) {
-        dndHandler.applyDragEvents(elements[i]); // Application des paramètres nécessaires aux éléments déplaçables
-    }
+    $(document).ready(function () {
+	    var elements = document.querySelectorAll('.draggable'),
+	        elementsLen = elements.length;
 
-    var droppers = document.querySelectorAll('.dropper'),
-        droppersLen = droppers.length;
+	    for (var i = 0; i < elementsLen; i++) {
+	        dndHandler.applyDragEvents(elements[i]); // Application des paramètres nécessaires aux éléments déplaçables
+	    }
 
-    for (var i = 0; i < droppersLen; i++) {
-        dndHandler.applyDropEvents(droppers[i]); // Application des événements nécessaires aux zones de drop
-    }
+	    var droppers = document.querySelectorAll('.dropper'),
+	        droppersLen = droppers.length;
+
+	    for (var i = 0; i < droppersLen; i++) {
+	        dndHandler.applyDropEvents(droppers[i]); // Application des événements nécessaires aux zones de drop
+	    }
+
+	});
 
 })();
