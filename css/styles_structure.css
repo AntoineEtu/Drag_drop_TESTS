@@ -1,28 +1,79 @@
-.film_structure_node{
-	
+/*Case ronde pour intégrer une video */
+.film_structure_node {
+    display: flex;
+    flex-direction: row;
+    bottom: 30%;
+    align-items: center;
+ }
+
+.c1 {
+    width: 50px;
+    height: 50px;
+    bottom: 50%;
+    background: white;
+    display: inline-block;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
 }
+
+
+
+/* General button style (reset) */
+.btn {
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background: none;
+    cursor: pointer;
+    padding: 25px 80px;
+    display: inline-block;
+    margin: 15px 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.btn:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+
+/* Bouton plus */
+.btn-2 {
+    background: #bfc932;
+    color: #fff;
+    box-shadow: 0 6px #cfd759;
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none;
+}
+
+/* Button 2i */
 .btn-2i {
     border-radius: 50%;
     width: 30px;
     height: 30px;
     padding: 0;
 }
-.btn-2 {
-    background: #cfd759;
-    color: #fff;
-    box-shadow: 0 6px #C7D048C7;
-    transition: none;
+
+.btn-2i:hover {
+    box-shadow: 0 4px #cfd759;
+    top: 2px;
 }
-.btn {
-    border: none;
-    font-family: inherit;
-    font-size: inherit;
-    cursor: pointer;
-    display: inline-block;
-    margin: 30px 45px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 700;
-    outline: none;
-    position: relative;
+
+.btn-2i:active {
+    box-shadow: 0 0 #bfc932;
+    top: 6px;
 }
