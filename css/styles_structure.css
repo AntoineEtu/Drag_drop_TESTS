@@ -1,1 +1,25 @@
-styles_structure.css
+.btn-2i {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+}
+.btn-2 {
+    background: #cfd759;
+    color: #fff;
+    box-shadow: 0 6px #C7D048C7;
+    transition: none;
+}
+.btn {
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    display: inline-block;
+    margin: 30px 45px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    outline: none;
+    position: relative;
+}
