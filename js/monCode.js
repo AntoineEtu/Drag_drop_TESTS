@@ -14,6 +14,7 @@ $(document).ready(function () {
         }
     });
     mediaMoveRightListener();
+    mediaMoveRightListener();
 
 });
 
@@ -60,6 +61,12 @@ function mediaMoveRightListener(){
     $('.arrow_button_right').click(function(){
         var widthVideo = $('.film_added_element').width();
         $('.film_list_container').scrollLeft(widthVideo);
+        //faire en sorte que le scroll puisse aller tout au bout */
+    });
+}
+function mediaMoveLeftListener(){
+    $('.arrow_button_left').click(function(){
+        $('.film_list_container').scrollRight( 78 );
         //faire en sorte que le scroll puisse aller tout au bout */
     });
 }
