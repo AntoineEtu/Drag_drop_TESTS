@@ -405,6 +405,13 @@ html,body{
 	background-color: #cecece;
 }
 
+.panzoom-elements{
+	position: relative;
+	display: flex;
+	width: 98%;
+	height: 100%;
+}
+
 .film_list_added_elements i:hover{
     opacity: 0.6;
     cursor: pointer;
