@@ -14,7 +14,15 @@
             	dndHandler.draggedElement = e.target;
             	//empêche les images d'être draggable
             	if($(e.target).is('img')){
-            		//on fait rien
+            		if($(e.target).hasClass('film_element_img_image')){
+            			var j =0;
+		            	while(!$(dndHandler.draggedElement).hasClass('draggable') && j<3){
+		            		dndHandler.draggedElement = dndHandler.draggedElement.parentNode;
+		            		i++;
+		            	}
+            		}else{
+            			//on fait rien
+            		}
             	}else{
             		var i =0;
 	            	while(!$(dndHandler.draggedElement).hasClass('draggable') && i<4){
