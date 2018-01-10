@@ -13,6 +13,8 @@ $(document).ready(function () {
             verifyInputs();
         }
     });
+    mediaMoveRightListener();
+
 });
 
 //vérifie les identifiants
@@ -51,5 +53,13 @@ function affiche_gif(){
         opacity: 1
     },300,function(){
         setTimeout(connectToUHS,700);
+    });
+}
+
+function mediaMoveRightListener(){
+    $('.arrow_button_right').click(function(){
+        var widthVideo = $('.film_added_element').width();
+        $('.film_list_container').scrollLeft(widthVideo);
+        //faire en sorte que le scroll puisse aller tout au bout */
     });
 }

@@ -77,3 +77,18 @@
     box-shadow: 0 0 #bfc932;
     top: 6px;
 }
+
+/* Button 2b */
+.btn-2b {
+    border-radius: 0 0 5px 5px;
+}
+
+.btn-2b:hover {
+    box-shadow: 0 8px #ab3c3c;
+    top: -2px;
+}
+
+.btn-2b:active {
+    box-shadow: 0 0 #ab3c3c;
+    top: 6px;
+}
